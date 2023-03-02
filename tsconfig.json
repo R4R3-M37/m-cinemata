@@ -1,0 +1,61 @@
+{
+	"include": [
+		"src/**/*",
+		"vite.config.ts"
+	],
+	"exclude": [
+		"node_modules"
+	],
+	"compilerOptions": {
+		"composite": true,
+		"baseUrl": ".",
+		"outDir": "dist",
+		"rootDir": ".",
+		"paths": {
+			"~/*": [
+				"src/*"
+			]
+		},
+		"target": "ESNext",
+		"lib": [
+			"DOM",
+			"DOM.Iterable",
+			"ESNext"
+		],
+		"useDefineForClassFields": true,
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true,
+		"strict": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "react-jsx",
+		"sourceMap": true,
+		"alwaysStrict": true,
+		"strictNullChecks": true,
+		"strictPropertyInitialization": true,
+		"strictFunctionTypes": true,
+		"noPropertyAccessFromIndexSignature": false,
+		"allowUnreachableCode": true,
+		"suppressExcessPropertyErrors": false,
+		"suppressImplicitAnyIndexErrors": false,
+		"noStrictGenericChecks": false,
+		"noImplicitAny": true,
+		"inlineSources": true,
+		"downlevelIteration": true,
+		"noEmitOnError": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"checkJs": true,
+		"noImplicitUseStrict": false,
+		"pretty": true,
+		"removeComments": true
+	}
+}

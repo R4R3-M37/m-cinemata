@@ -1,0 +1,5 @@
+export { MovieSimilarPage } from '~/pages/movie/MovieSimilarPage'
+export { MovieSequelsPrequelsPage } from '~/pages/movie/MovieSequelsPrequelsPage'
+export { MoviePersonsPage } from '~/pages/movie/MoviePersonsPage'
+export { MovieImagesPage } from '~/pages/movie/MovieImagesPage'
+export { MoviePage } from '~/pages/movie/MoviePage'

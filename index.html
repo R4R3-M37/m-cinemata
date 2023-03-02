@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html class='' lang='ru'>
+<head>
+	<meta charset='UTF-8' />
+	<meta content='width=device-width, initial-scale=1.0' name='viewport' />
+	<link href='/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180' />
+	<link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png' />
+	<link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png' />
+	<link color='#5bbad5' href='/safari-pinned-tab.svg' rel='mask-icon' />
+	<link href='/favicon.ico' rel='shortcut icon' />
+	<meta content='Cinemata' name='apple-mobile-web-app-title' />
+	<meta content='Cinemata' name='application-name' />
+	<meta content='#2b5797' name='msapplication-TileColor' />
+	<meta content='/mstile-144x144.png' name='msapplication-TileImage' />
+	<meta content='/browserconfig.xml' name='msapplication-config' />
+	<meta content='#ffffff' name='theme-color' />
+	<meta
+		content='Фильмы из кинотеатра легально, напрямую от голливудских студий. Смотрите новинки и лучшие сериалы, кино, мультфильмы в хорошем качестве.'
+		name='description'
+	/>
+	<meta content='yes' name='apple-mobile-web-app-capable' />
+	<meta content='yes' name='mobile-web-app-capable' />
+	<meta content='Фильмы из кинотеатра легально, напрямую от голливудских студий.' property='og:title' />
+	<meta content='/src/shared/assets/no-poster.png' property='og:image' />
+	<link href='/web-manifest' rel='manifest' />
+	<title>Cinemata</title>
+</head>
+<body class='text-black dark:bg-d-primary dark:text-white'>
+<noscript>Your browser does not support JavaScript!</noscript>
+<div id='root'></div>
+<script>
+	if ('serviceWorker' in navigator) {
+		window.addEventListener('load', function() {
+			navigator.serviceWorker.register('serviceWorker.js')
+		})
+	}
+	if (
+		localStorage['theme'] === 'dark' ||
+		localStorage['theme'] === 'auto' ||
+		(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+	) {
+		document.documentElement.classList.add('dark')
+		localStorage.setItem('theme', 'dark')
+	} else {
+		document.documentElement.classList.remove('dark')
+	}
+</script>
+<script src='/src/index.tsx' type='module'></script>
+</body>
+</html>
