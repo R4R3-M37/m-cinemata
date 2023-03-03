@@ -117,7 +117,7 @@ https://m-cinemata.vercel.app/
 - Миграция на новый плеер
 
 - Добавление версии для планшетов, компьютеров
-- 
+
 ## Support
 
 Если вы нашли ошибку, пожалуйста напишите на почту [iw.code@yandex.ru](mailto:iw.code@yandex.ru).
