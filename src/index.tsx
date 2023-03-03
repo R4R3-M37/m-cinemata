@@ -5,7 +5,7 @@ import { ErrorBoundary } from 'react-error-boundary'
 
 import { AppLayout } from '~/app/layout/AppLayout'
 
-import { NotFoundPage } from '~/pages/not-found/ui/NotFoundPage'
+import { NotFoundPage } from '~/pages/not-found/NotFoundPage'
 
 import { router } from '~/shared/routing'
 

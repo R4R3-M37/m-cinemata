@@ -16,7 +16,7 @@ export const movieBySearchQuery = createQuery({
 		const sortBy = sortByFormatter[query.sortBy]
 
 		const response = await fetch(
-			`${baseUrl}/movie?field=rating.kp&search=${query.rating}${category}${genre}${year}&limit=10&page=${page}${sortBy}&sortType=-1${token}`
+			`${baseUrl}/movie?field=rating.kp&search=${query.rating}${category}${genre}${year}&limit=20&page=${page}${sortBy}&sortType=-1${token}`
 		)
 
 		return response.json()
@@ -45,7 +45,7 @@ export const moviesByIDsQuery = createQuery({
 	effect: createEffect(async ({ ids }: { ids: string[] }): Promise<MoviesRoot> => {
 		const idsFormatted = ids.map((id) => `search=${id}&field=id`).join('&')
 
-		const response = await fetch(`${baseUrl}/movie?search[]=1-10&field=rating.kp&${idsFormatted}&limit=10${token}`)
+		const response = await fetch(`${baseUrl}/movie?${idsFormatted}&limit=50${token}`)
 
 		return response.json()
 	})
@@ -76,7 +76,7 @@ export const newMoviesQuery = createQuery({
 		const response = await fetch(
 			`${baseUrl}/movie?field=rating.kp&search=6-10&field=year&search=${
 				currentYear - 1
-			}-${currentYear}&sortField=year&sortType=1&limit=10&page=${page}&sortField=votes.imdb&sortType=-1${token}`
+			}-${currentYear}&sortField=year&sortType=1&limit=20&page=${page}&sortField=votes.imdb&sortType=-1${token}`
 		)
 
 		return response.json()
@@ -88,7 +88,7 @@ export const newFilmsQuery = createQuery({
 		const response = await fetch(
 			`${baseUrl}/movie?field=rating.kp&search=6-10&field=year&search=${
 				currentYear - 1
-			}-${currentYear}&field=typeNumber&search=1&limit=10&page=${page}&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1${token}`
+			}-${currentYear}&field=typeNumber&search=1&limit=20&page=${page}&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1${token}`
 		)
 
 		return response.json()
@@ -100,7 +100,7 @@ export const newSerialsQuery = createQuery({
 		const response = await fetch(
 			`${baseUrl}/movie?field=rating.kp&search=6-10&field=year&search=${
 				currentYear - 1
-			}-${currentYear}&field=typeNumber&search=2&limit=10&page=${page}&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1${token}`
+			}-${currentYear}&field=typeNumber&search=2&limit=20&page=${page}&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1${token}`
 		)
 
 		return response.json()
@@ -112,7 +112,7 @@ export const newAnimeQuery = createQuery({
 		const response = await fetch(
 			`${baseUrl}/movie?field=rating.kp&search=6-10&field=year&search=${
 				currentYear - 1
-			}-${currentYear}&field=typeNumber&search=4&limit=10&page=${page}&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1${token}`
+			}-${currentYear}&field=typeNumber&search=4&limit=20&page=${page}&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1${token}`
 		)
 
 		return response.json()
@@ -124,7 +124,7 @@ export const newCartoonsQuery = createQuery({
 		const response = await fetch(
 			`${baseUrl}/movie?field=rating.kp&search=6-10&field=year&search=${
 				currentYear - 1
-			}-${currentYear}&field=typeNumber&search=3&limit=10&page=${page}&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1${token}`
+			}-${currentYear}&field=typeNumber&search=3&limit=20&page=${page}&sortField=year&sortType=1&sortField=votes.imdb&sortType=-1${token}`
 		)
 
 		return response.json()
@@ -192,7 +192,7 @@ export const horrorsAnimeQuery = createQuery({
 export const detectivesSerialsQuery = createQuery({
 	effect: createEffect(async ({ page }: { page: number }): Promise<MoviesRoot> => {
 		const response = await fetch(
-			`${baseUrl}/movie?field=genres.name&search=детектив&field=typeNumber&search=2&sortField=rating.kp&sortType=-1&page=${page}${token}`
+			`${baseUrl}/movie?field=genres.name&search=детектив&field=typeNumber&search=2&sortField=rating.kp&sortType=-1&page=${page}&limit=20${token}`
 		)
 
 		return response.json()
@@ -272,7 +272,7 @@ export const personByIDQuery = createQuery({
 export const personsByNameQuery = createQuery({
 	effect: createEffect(async ({ name, page }: { name: string; page: number }): Promise<PersonsRoot> => {
 		const response = await fetch(
-			`${baseUrl}/person?field=name&search=${name}&field=photo&search=!null&page=${page}${token}`
+			`${baseUrl}/person?field=name&search=${name}&field=photo&search=!null&page=${page}&limit=20${token}`
 		)
 
 		return response.json()
@@ -284,7 +284,7 @@ export const personsByIDsQuery = createQuery({
 		const idsFormatted = ids.map((id) => `search=${id}&field=id`).join('&')
 
 		const response = await fetch(
-			`${baseUrl}/person?${idsFormatted}&field=name&search=!null&field=enName&search=!null&field=photo&search=!null&${token}`
+			`${baseUrl}/person?${idsFormatted}&field=name&search=!null&field=enName&search=!null&field=photo&search=!null&limit=50&${token}`
 		)
 
 		return response.json()
@@ -306,7 +306,7 @@ export const recentPersonsQuery = createQuery({
 export const youngestPersonsQuery = createQuery({
 	effect: createEffect(async ({ page }: { page: number }): Promise<PersonsRoot> => {
 		const response = await fetch(
-			`${baseUrl}/person?field=age&search=21-80&field=name&search=!null&field=enName&search=!null&field=photo&search=!null&page=${page}${token}`
+			`${baseUrl}/person?field=age&search=21-80&field=name&search=!null&field=enName&search=!null&field=photo&search=!null&page=${page}&limit=20${token}`
 		)
 
 		return response.json()
@@ -316,7 +316,7 @@ export const youngestPersonsQuery = createQuery({
 export const oldestPersonsQuery = createQuery({
 	effect: createEffect(async ({ page }: { page: number }): Promise<PersonsRoot> => {
 		const response = await fetch(
-			`${baseUrl}/person?field=age&search=21-80&field=name&search=!null&field=enName&search=!null&field=photo&search=!null&sortField=age&sortType=-1&page=${page}${token}`
+			`${baseUrl}/person?field=age&search=21-80&field=name&search=!null&field=enName&search=!null&field=photo&search=!null&sortField=age&sortType=-1&page=${page}&limit=20${token}`
 		)
 
 		return response.json()

@@ -1,7 +1,7 @@
 import { Route } from 'atomic-router-react'
 
-import { MoviesByGenrePage } from '~/pages/genres/ui/MoviesByGenrePage'
-import { HomePage } from '~/pages/home/ui/HomePage'
+import { MoviesByGenrePage } from '~/pages/genres/MoviesByGenrePage'
+import { HomePage } from '~/pages/home/HomePage'
 import {
 	MovieImagesPage,
 	MoviePage,
@@ -9,16 +9,16 @@ import {
 	MovieSequelsPrequelsPage,
 	MovieSimilarPage
 } from '~/pages/movie/ui'
-import { MyPage } from '~/pages/my/ui/MyPage'
-import { NotFoundPage } from '~/pages/not-found/ui/NotFoundPage'
+import { MyPage } from '~/pages/my/MyPage'
+import { NotFoundPage } from '~/pages/not-found/NotFoundPage'
 import { OnlineCinemaPage } from '~/pages/online-cinema/OnlineCinemaPage'
-import { PersonPage } from '~/pages/persons/ui/PersonPage'
-import { PersonsPage } from '~/pages/persons/ui/PersonsPage'
+import { PersonPage } from '~/pages/persons/PersonPage'
+import { PersonsPage } from '~/pages/persons/PersonsPage'
 import { SearchMoviesPage } from '~/pages/search/movies/SearchMoviesPage'
 import { SearchPersonsPage } from '~/pages/search/persons/SearchPersonsPage'
 import { SearchFiltersPage } from '~/pages/search/SearchFiltersPage'
 import { SearchPage } from '~/pages/search/SearchPage'
-import { SettingsPage } from '~/pages/settings/ui/SettingsPage'
+import { SettingsPage } from '~/pages/settings/SettingsPage'
 
 import {
 	history,

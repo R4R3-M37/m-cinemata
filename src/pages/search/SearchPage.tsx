@@ -5,7 +5,7 @@ import classlite from 'classlite'
 import { createEffect, createEvent, sample } from 'effector'
 import { useUnit } from 'effector-react'
 
-import { FavoritesMovies } from '~/widgets/favorites-movies/ui/FavoritesMovies'
+import { FavoritesMovies } from '~/widgets/favorites-movies/FavoritesMovies'
 import { RecentMovies } from '~/widgets/recent-movies/RecentMovies'
 import { SearchAutocomplete } from '~/widgets/search-autocomplete/SearchAutocomplete'
 

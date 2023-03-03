@@ -4,7 +4,7 @@ import { Link } from 'atomic-router-react'
 import { createEffect, createEvent, sample } from 'effector'
 import { useUnit } from 'effector-react'
 
-import { FavoritesPersons } from '~/widgets/favorites-persons/ui/FavoritesPersons'
+import { FavoritesPersons } from '~/widgets/favorites-persons/FavoritesPersons'
 import { RecentPersons } from '~/widgets/recent-persons/RecentPersons'
 import { SearchAutocomplete } from '~/widgets/search-autocomplete/SearchAutocomplete'
 

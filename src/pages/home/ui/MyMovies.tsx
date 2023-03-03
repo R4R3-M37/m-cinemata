@@ -1,6 +1,6 @@
 import { useUnit } from 'effector-react'
 
-import { FavoritesMovies } from '~/widgets/favorites-movies/ui/FavoritesMovies'
+import { FavoritesMovies } from '~/widgets/favorites-movies/FavoritesMovies'
 import { RecentMovies } from '~/widgets/recent-movies/RecentMovies'
 
 import {

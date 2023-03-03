@@ -1,5 +1,5 @@
-import { FavoritesMovies } from '~/widgets/favorites-movies/ui/FavoritesMovies'
-import { FavoritesPersons } from '~/widgets/favorites-persons/ui/FavoritesPersons'
+import { FavoritesMovies } from '~/widgets/favorites-movies/FavoritesMovies'
+import { FavoritesPersons } from '~/widgets/favorites-persons/FavoritesPersons'
 import { RecentMovies } from '~/widgets/recent-movies/RecentMovies'
 import { RecentPersons } from '~/widgets/recent-persons/RecentPersons'
 

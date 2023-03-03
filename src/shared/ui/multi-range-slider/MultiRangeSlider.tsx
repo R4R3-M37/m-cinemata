@@ -9,8 +9,8 @@ interface Props {
 }
 
 export const MultiRangeSlider = ({ min, max, onChange, className }: Props) => {
-	const [minVal, setMinVal] = useState(min)
-	const [maxVal, setMaxVal] = useState(max)
+	const [minVal, setMinVal] = useState<number>(min)
+	const [maxVal, setMaxVal] = useState<number>(max)
 	const minValRef = useRef(min)
 	const maxValRef = useRef(max)
 	const range = useRef<HTMLInputElement>(null)
@@ -69,9 +69,12 @@ export const MultiRangeSlider = ({ min, max, onChange, className }: Props) => {
 				}}
 				className='thumb thumb--right'
 			/>
-			<div className='slider'>
-				<div className='slider__track' />
-				<div ref={range} className='slider__range' />
+			<div className='relative w-full'>
+				{/**/}
+				{/*<div className='slider__track' />*/}
+				{/*<div ref={range} className='slider__range' />*/}
+				<div className='slider__track absolute h-[5px] rounded w-full' />
+				<div ref={range} className='slider__range absolute h-[5px] rounded ' />
 			</div>
 		</div>
 	)
