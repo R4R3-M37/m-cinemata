@@ -118,6 +118,6 @@ https://m-cinemata.vercel.app/
 
 - Добавление версии для планшетов, компьютеров
 
-## Support
+## Нашли ошибку?
 
 Если вы нашли ошибку, пожалуйста напишите на почту [iw.code@yandex.ru](mailto:iw.code@yandex.ru).
