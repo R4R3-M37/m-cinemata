@@ -43,6 +43,7 @@ export const MoviePage = () => {
 	const loading = useStore(movieByIDQuery.$pending)
 
 	const movieName = movie?.name || movie?.enName || movie?.alternativeName || ''
+	const ticketsOnSale = !!movie?.ticketsOnSale
 	const movieEnName = movie?.enName || movie?.alternativeName || ''
 	const ratingKp = movie?.rating?.kp?.toFixed(1) || 0
 	const movieImage = movie?.poster?.url || ''
@@ -79,7 +80,7 @@ export const MoviePage = () => {
 						country={movie?.countries && movie.countries[0].name}
 						movieLength={movie?.movieLength}
 					/>
-					<WatchMovie id={id} />
+					<WatchMovie id={id} ticketsOnSale={ticketsOnSale} />
 					<PersonsPreview id={id} persons={movie?.persons} />
 					<MovieOptions id={id} name={movieName} image={movieImage || backdropImage} />
 				</div>

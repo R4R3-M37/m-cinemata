@@ -85,7 +85,7 @@ export const Reviews = () => {
 													(type === 'POSITIVE' && '!text-green-500') ||
 													(type === 'NEGATIVE' && '!text-red-500') ||
 													(type === 'NEUTRAL' && 'dark:text-white')
-												} text-xl font-semibold text-gray-900`}>
+												} text-xl font-semibold`}>
 												{title || description?.slice(0, 30) + '...'}
 											</h3>
 										</div>

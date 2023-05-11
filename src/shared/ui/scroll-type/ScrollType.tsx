@@ -15,7 +15,7 @@ export const ScrollType = () => {
 					<div
 						className={`${
 							scrollType === type && 'border-[1px] border-orange-500'
-						} flex h-[150px] w-[150px] flex-col justify-center rounded-lg bg-gray-50 p-4 text-center dark:bg-d-secondary`}
+						} flex h-[150px] flex-col justify-center rounded-lg bg-gray-50 p-4 text-center dark:bg-d-secondary`}
 						onClick={() => changed(type)}
 						key={type}>
 						<div className='text-lg'>{title}</div>
