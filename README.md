@@ -1,21 +1,19 @@
 
-# Cinemata - мобильное веб-приложения для просмотра фильмов
+# Cinemata is a mobile web application for watching movies
 
-#### Фильмы из кинотеатра легально, напрямую от голливудских студий. Смотрите новинки и лучшие сериалы, кино, мультфильмы в хорошем качестве. Сайт работает только на мобильных устройствах, версия для компьютера и планшета в разработке.
+#### The app offers legal movies obtained directly from Hollywood studios, including new releases, top series, movies, and cartoons in high quality. The website is only available on mobile devices, with a version for computers and tablets currently in development.
 
-
-## Скриншоты
+## Screenshots
 
 ![App Screenshot](https://i.imgur.com/pteDsRU.jpeg)
 
-
-## Демо
+## Link
 
 https://m-cinemata.vercel.app/
 
-## 🔧 Стек технологий
+## 🔧 Development stack
 
-#### Использовались следующие технологии:
+#### The following technologies were used:
 
 - #### React
 
@@ -35,69 +33,66 @@ https://m-cinemata.vercel.app/
 
 - #### Feature Sliced Design
 
+## 🚀 Features
 
-## Фичи
-
-- Переключения тем
-- Поиск фильмов по названию, жанру, рейтингу, оценкам
-- Добавление фильмов в избранное
-- Просмотр деталей фильма, включая рейтинг, отзывы, сборы
-- Поиск актёров по имени
-- Просмотр недавних фильмов и актёров
-
-
+- Theme switching
+- Movie search by title, genre, rating, and reviews
+- Adding movies to favorites
+- Viewing movie details, including rating, reviews, and box office
+- Actor search by name
+- Viewing recent movies and actors
 
 ## 📄 FAQ
 
-#### Сайт не отображает данные во время поиска
+#### Found nothing from the search.
 
-Значит наступил лимит запросов, в сутки АПИ позволяет сделать 200 запросов
+This means that the request limit has been reached. The API allows for 200 requests per day.
 
-#### Реклама во время просмотра
+#### Advertising during video.
 
-Реклама во время просмотра зависит от плеера, в данном случая я не могу повлиять на показ рекламы и не несу за неё отвественности
-## ⚙ Запуск локально
+I cannot remove or change ads. Ads based on video player.
 
-Клонирование репозитория
+## ⚙ Running locally
+
+Cloning the repository
 
 ```bash
   git clone https://github.com/R4R3-M37/m-cinemata.git
 ```
 
-Переход в директорию проекта
+Navigating to the project directory
 
 ```bash
   cd m.cinemata-main
 ```
 
-Установка зависимостей
+Installing the dependencies
 
 ```bash
   npm install
 ```
 
-Запуск сервера для разработки
+Starting the development server
 
 ```bash
   npm run dev
 ```
 
-Генерация билда
+Building the project
 
 ```bash
   npm run build
 ```
 
-Запуск сервера для билда
+Running the server for build
 
 ```bash
   npx vite preview
 ```
 
+## 🛠 Running the tests
 
-## 🛠 Запуск тестов
-
-Для запуска тестов используйте эту команду
+To run the tests, use this command
 
 ```bash
   npm run test
@@ -106,18 +101,16 @@ https://m-cinemata.vercel.app/
 
 ## 🔗 API
 
-- [Сайт АПИ](https://kinopoisk.dev/)
-- [Создатель АПИ](https://t.me/mdwit)
+- [API's website](https://kinopoisk.dev/)
+- [API's creator](https://t.me/mdwit)
 
 
 ## 🗺 Roadmap
 
-- Рефакторинг (API, перепись кода с императивного на декларативный стиль)
+- Refactoring
+- Migration to a new video player
+- Adding a version for tablets and pc
 
-- Миграция на новый плеер
+## 💻 Support
 
-- Добавление версии для планшетов, компьютеров
-- 
-## Support
-
-Если вы нашли ошибку, пожалуйста напишите на почту [iw.code@yandex.ru](mailto:iw.code@yandex.ru).
+If you have found an error, please write to the email [iw.code@yandex.ru](mailto:iw.code@yandex.ru).
