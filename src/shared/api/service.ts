@@ -32,7 +32,7 @@ export const movieBySearchQuery = createQuery({
 
 export const movieByIDQuery = createQuery({
 	effect: createEffect(async ({ id }: { id: string }): Promise<Movies> => {
-		const response = await fetch(`${baseUrl}/v1/movie?search=${id}&field=id`, {
+		const response = await fetch(`${baseUrl}/v1/movie/${id}`, {
 			method: 'GET',
 			headers: {
 				'X-API-KEY': '46H7C5X-FSWMC00-PBP35RN-8VPD7YX',
