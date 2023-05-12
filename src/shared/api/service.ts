@@ -345,7 +345,7 @@ export const newDetectivesQuery = createQuery({
 export const top250MoviesQuery = createQuery({
 	effect: createEffect(async ({ page }: { page: number }): Promise<MoviesRoot> => {
 		const response = await fetch(
-			`${baseUrl}/v1/movie/?field=top250&search=!null&page=${page}`,
+			`${baseUrl}/v1/movie?top250=!null&page=${page}&limit=10`,
 
 			{
 				method: 'GET',
