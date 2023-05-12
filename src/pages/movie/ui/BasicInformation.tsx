@@ -12,10 +12,12 @@ interface Props {
 	country?: string
 	movieLength?: number
 	ageRating?: number
+	seriesLength?: number
 }
 
 export const BasicInformation = (props: Props) => {
-	const { ratingKp, votes, top250, alternativeName, year, genres, country, movieLength, ageRating } = props
+	const { ratingKp, votes, top250, alternativeName, year, genres, country, movieLength, ageRating, seriesLength } =
+		props
 
 	return (
 		<>
@@ -38,6 +40,7 @@ export const BasicInformation = (props: Props) => {
 				{country}
 				{!!movieLength && `, ${movieLengthFormatter(movieLength)}`}
 				{!!ageRating && `, ${ageRating}+`}
+				{!!seriesLength && `, ${movieLengthFormatter(seriesLength)}`}
 			</div>
 		</>
 	)

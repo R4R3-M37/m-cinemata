@@ -79,6 +79,7 @@ export const MoviePage = () => {
 						genres={movie?.genres?.map(({ name }) => name).join(', ')}
 						country={movie?.countries && movie.countries[0].name}
 						movieLength={movie?.movieLength}
+						seriesLength={movie?.seriesLength}
 					/>
 					<WatchMovie id={id} ticketsOnSale={ticketsOnSale} />
 					<PersonsPreview id={id} persons={movie?.persons} />
