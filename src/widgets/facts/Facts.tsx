@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 
 import { MovieBlockTitle } from '~/entities/movie/MovieBlockTitle'
 
-import * as Types from '~/shared/api/types/movies'
+import * as Types from '~/shared/api/types/person'
 import { BottomPopup } from '~/shared/ui/bottom-popup/BottomPopup'
 import { createBottomPopupApi } from '~/shared/ui/bottom-popup/model'
 

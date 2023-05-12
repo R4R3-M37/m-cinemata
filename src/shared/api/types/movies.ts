@@ -8,20 +8,17 @@ export interface MovieImagesRoot {
 }
 
 export interface ExternalId {
-	kpHD?: number
+	kpHD?: string
 	imdb?: string
 	tmdb?: number
-	_id?: string
 }
 
 export interface Poster {
-	_id?: string
 	url?: string
 	previewUrl?: string
 }
 
 export interface Backdrop {
-	_id?: string
 	url?: string
 	previewUrl?: string
 }
@@ -29,19 +26,19 @@ export interface Backdrop {
 export interface Rating {
 	kp?: number
 	imdb?: number
+	tmdb?: number
 	filmCritics?: number
 	russianFilmCritics?: number
 	await?: number
-	_id?: string
 }
 
 export interface Votes {
-	kp?: number
+	kp?: string
 	imdb?: number
+	tmdb?: number
 	filmCritics?: number
 	russianFilmCritics?: number
 	await?: number
-	_id?: string
 }
 
 export interface Trailers {
@@ -49,72 +46,51 @@ export interface Trailers {
 	name?: string
 	site?: string
 	type?: string
-	_id?: string
 }
 
 export interface Videos {
-	_id?: string
 	trailers?: Trailers[]
 	teasers?: never[]
 }
 
 export interface Budget {
-	_id?: string
 	value?: number
 	currency?: string
 }
 
-export interface World {
+export interface CurrencyValue {
 	value?: number
 	currency?: string
-	_id?: string
-}
-
-export interface Russia {
-	value?: number
-	currency?: string
-	_id?: string
-}
-
-export interface Usa {
-	value?: number
-	currency?: string
-	_id?: string
 }
 
 export interface Fees {
-	world?: World
-	russia?: Russia
-	usa?: Usa
-	_id?: string
+	world?: CurrencyValue
+	russia?: CurrencyValue
+	usa?: CurrencyValue
 }
 
 export interface Premiere {
-	_id?: string
 	country?: string
 	world?: string
 	russia?: string
-	cinema?: string
-	dvd?: string
-	bluray?: string
 	digital?: string
+	cinema?: string
+	bluray?: string
+	dvd?: string
 }
 
-export interface Logo {
+export interface WatchabilityLogo {
 	url?: string
-	_id?: string
 }
 
-export interface Items {
-	logo?: Logo
+export interface WatchabilityItems {
 	name?: string
-	url?: string
-	_id?: string
+	logo: WatchabilityLogo
+	url: string
 }
 
 export interface Watchability {
-	items?: Items[]
-	_id?: string
+	items?: WatchabilityItems[]
 }
 
 export interface Countries {
@@ -122,9 +98,9 @@ export interface Countries {
 }
 
 export interface Facts {
-	value?: string
-	type?: string
-	spoiler?: boolean
+	value: string
+	type: string
+	spoiler: boolean
 }
 
 export interface Genres {
@@ -132,7 +108,9 @@ export interface Genres {
 }
 
 export interface Names {
-	name?: string
+	name: string
+	language?: string
+	type?: string
 }
 
 export interface Persons {
@@ -140,31 +118,41 @@ export interface Persons {
 	photo?: string
 	name?: string
 	enName?: string
-	enProfession?: string
+	description: string
+	profession: string
+	enProfession: string
 }
 
-export interface SeasonsInf {
+export interface SeasonsInfo {
 	number?: number
 	episodesCount?: number
 }
 
 export interface SequelsAndPrequel {
-	_id?: string
 	id?: number
-	name?: string
-	enName?: string
-	alternativeName?: string
+	name: string
+	enName: string
+	alternativeName: string
 	type?: string
-	poster?: Poster
+	poster: Poster
+}
+
+export interface LinkedMovie {
+	id?: number
+	name: string
+	enName: string
+	alternativeName: string
+	type?: string
+	poster: Poster
 }
 
 export interface SimilarMovie {
-	_id?: string
 	id?: number
-	name?: string
-	enName?: string
-	alternativeName?: string
-	poster?: Poster
+	name: string
+	enName: string
+	alternativeName: string
+	type?: string
+	poster: Poster
 }
 
 export interface SpokenLanguage {
@@ -179,64 +167,72 @@ export interface Technology {
 }
 
 export interface ImagesInfo {
-	_id?: string
-	framesCount?: number
+	postersCount: number
+	backdropsCount: number
+	framesCount: number
 }
 
 export interface ReleaseYears {
 	start?: number
 	end?: number
-	_id?: string
+}
+
+export interface Audience {
+	count: number
+	country: string
+}
+
+export interface ProductionCompanies {
+	name?: string
+	url?: string
+	previewUrl?: string
 }
 
 export interface Movies {
-	externalId?: ExternalId
-	logo?: Logo
-	poster?: Poster
-	backdrop?: Backdrop
+	id: number
+	externalId: ExternalId
+	name?: string
+	alternativeName?: string
+	enName?: string
+	names: Names[]
+	type: string
+	typeNumber: number
+	year?: number
+	description?: string
+	shortDescription?: string
+	slogan?: string
+	status?: string
 	rating?: Rating
 	votes?: Votes
+	movieLength?: number
+	ratingMpaa?: string
+	ageRating?: number
+	logo?: WatchabilityLogo
+	poster?: Poster
+	backdrop?: Backdrop
 	videos?: Videos
+	genres?: Genres[]
+	countries?: Countries[]
+	persons?: Persons[]
+	reviewInfo?: never
+	seasonsInfo?: SeasonsInfo
 	budget?: Budget
 	fees?: Fees
 	premiere?: Premiere
+	similarMovies?: LinkedMovie[]
+	sequelsAndPrequels?: LinkedMovie[]
 	watchability?: Watchability
-	collections?: never[]
-	updateDates?: never[]
-	id?: number | string
-	alternativeName?: string
-	countries?: Countries[]
-	createdAt?: string
-	description?: string
-	enName?: string
-	facts?: Facts[]
-	genres?: Genres[]
-	movieLength?: number
-	name?: string
-	names?: Names[]
-	persons?: Persons[]
-	productionCompanies?: never[]
-	ratingMpaa?: string
-	seasonsInfo?: SeasonsInf[]
-	sequelsAndPrequels?: SequelsAndPrequel[]
-	shortDescription?: string
-	similarMovies?: SimilarMovie[]
-	slogan?: string
-	spokenLanguages?: SpokenLanguage[]
-	status?: string
-	technology?: Technology
-	ticketsOnSale?: boolean
-	type?: string
-	typeNumber?: number
-	updatedAt?: string
-	year?: number
-	imagesInfo?: ImagesInfo
-	ageRating?: number
-	releaseYears?: ReleaseYears[]
+	releaseYears?: ReleaseYears
 	top10?: number
 	top250?: number
-	lists?: never[]
-	createDate?: string
+	ticketsOnSale?: boolean
+	totalSeriesLength?: number
+	seriesLength?: number
+	isSeries: boolean
+	audience?: Audience[]
+	facts: Facts[]
+	imagesInfo: ImagesInfo
+	productionCompanies: ProductionCompanies[]
 }
 
 export interface MoviesRoot {

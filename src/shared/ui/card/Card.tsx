@@ -17,7 +17,7 @@ interface Props {
 export const Card = ({ className, id, rating, poster, name, enName, alternativeName }: Props) => {
 	const classNameWidth = className?.split(' ').find((className) => className.includes('w'))
 
-	const altName = enName || alternativeName || ''
+	const altName = enName || alternativeName
 	const ratingKp = (rating?.kp || rating?.imdb)?.toFixed(1)
 
 	return (
@@ -33,7 +33,7 @@ export const Card = ({ className, id, rating, poster, name, enName, alternativeN
 						</div>
 					)}
 					<Image className='h-[200px] rounded-sm' src={poster?.url} loading='lazy' alt='' />
-					<div className={`font-semibold ${name.length > 20 && 'text-sm'}`}>{name || ''}</div>
+					<div className={`font-semibold ${name.length > 20 && 'text-sm'}`}>{name}</div>
 					<p className={`${altName.length > 20 && 'text-sm'} font-light text-gray-500 dark:text-gray-400`}>
 						{altName}
 					</p>

@@ -1,13 +1,14 @@
 import { Link } from 'atomic-router-react'
 
 import { Movies } from '~/shared/api/types/movies'
+import { Docs } from '~/shared/api/types/persons'
 import { onlineCinemaRoute } from '~/shared/routing'
 import { CardListSkeleton } from '~/shared/ui/card-list/ui/CardListSkeleton'
 import { Card } from '~/shared/ui/card/Card'
 import { ShowMore } from '~/shared/ui/scroll-type/ShowMore'
 
 interface Props {
-	data?: Movies[]
+	data?: Movies[] | Docs[] | any[]
 	loading: boolean
 	title: string
 	count?: number
@@ -32,15 +33,15 @@ export const CardList = ({ data, loading, title, count, linkParams }: Props) => 
 			<div className='flex overflow-auto'>
 				<div className='flex items-center overflow-auto'>
 					<div className='ml-2 flex items-start space-x-4 pt-4 pb-2'>
-						{data?.map((movie, i) => (
+						{data?.map((item, i) => (
 							<Card
 								className='w-[150px]'
-								id={String(movie.id)}
-								rating={movie.rating}
-								poster={movie.poster}
-								name={movie.name || ''}
-								enName={movie.enName || ''}
-								alternativeName={movie.alternativeName || ''}
+								id={String(item.id)}
+								rating={item?.rating}
+								poster={item?.poster}
+								name={item.name || ''}
+								enName={item.enName || ''}
+								alternativeName={item.alternativeName}
 								key={i}
 							/>
 						))}

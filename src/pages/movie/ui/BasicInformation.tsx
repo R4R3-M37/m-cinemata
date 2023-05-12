@@ -25,7 +25,7 @@ export const BasicInformation = (props: Props) => {
 				<div className={`font-semibold ${Number(ratingKp) >= 7 ? 'text-green-500' : 'text-gray-500'}`}>
 					{ratingKp}
 				</div>
-				<div className='text-gray-500'>{kFormatter(votes?.kp || 0)}</div>
+				<div className='text-gray-500'>{kFormatter(Number(votes?.kp))}</div>
 				{top250 && (
 					<div className='bg-gradient-to-br from-yellow-600 via-yellow-900 to-yellow-800 bg-clip-text font-bold text-transparent'>
 						ТОП 250
