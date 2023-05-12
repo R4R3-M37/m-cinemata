@@ -17,7 +17,7 @@ interface Props {
 export const Card = ({ className, id, rating, poster, name, enName, alternativeName }: Props) => {
 	const classNameWidth = className?.split(' ').find((className) => className.includes('w'))
 
-	const altName = enName || alternativeName
+	const altName = enName || alternativeName || ''
 	const ratingKp = (rating?.kp || rating?.imdb)?.toFixed(1)
 
 	return (
