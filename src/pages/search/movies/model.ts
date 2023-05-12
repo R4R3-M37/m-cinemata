@@ -1,7 +1,7 @@
 import { RouteParamsAndQuery } from 'atomic-router'
 import { createEffect, createEvent, createStore, sample } from 'effector'
 
-import { moviesByNameQuery } from '~/shared/api/fetch'
+import { moviesByNameQuery } from '~/shared/api/service'
 import { Movies } from '~/shared/api/types/movies'
 import { history, moviesBySearchRoute } from '~/shared/routing'
 

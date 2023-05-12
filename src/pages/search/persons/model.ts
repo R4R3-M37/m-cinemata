@@ -1,7 +1,7 @@
 import { RouteParamsAndQuery } from 'atomic-router'
 import { createEffect, createEvent, createStore, sample } from 'effector'
 
-import { personsByNameQuery } from '~/shared/api/fetch'
+import { personsByNameQuery } from '~/shared/api/service'
 import { Docs } from '~/shared/api/types/persons'
 import { history, personsBySearchRoute } from '~/shared/routing'
 

@@ -3,7 +3,7 @@ import 'swiper/css'
 
 import { MovieBlock } from '~/entities/movie/MovieBlock'
 
-import { imagesByMovieIDQuery } from '~/shared/api/fetch'
+import { imagesByMovieIDQuery } from '~/shared/api/service'
 import { movieImagesRoute } from '~/shared/routing'
 import { Image } from '~/shared/ui/Image'
 import { ShowMore } from '~/shared/ui/scroll-type/ShowMore'

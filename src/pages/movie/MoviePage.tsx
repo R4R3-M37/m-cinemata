@@ -26,7 +26,7 @@ import { ImageBackground } from '~/entities/movie/ImageBackground'
 import { MovieLogo } from '~/entities/movie/MovieLogo'
 import { PersonsPreview } from '~/entities/movie/PersonsPreview'
 
-import { movieByIDQuery } from '~/shared/api/fetch'
+import { movieByIDQuery } from '~/shared/api/service'
 import { useDocumentMeta } from '~/shared/lib/hooks/useDocumentMeta'
 import { movieRoute, notFoundRoute } from '~/shared/routing'
 import { HeaderGoBack } from '~/shared/ui/HeaderGoBack'

@@ -8,7 +8,7 @@ import { FavoritesPersons } from '~/widgets/favorites-persons/FavoritesPersons'
 import { RecentPersons } from '~/widgets/recent-persons/RecentPersons'
 import { SearchAutocomplete } from '~/widgets/search-autocomplete/SearchAutocomplete'
 
-import { oldestPersonsQuery, personsByNameQuery, youngestPersonsQuery } from '~/shared/api/fetch'
+import { oldestPersonsQuery, personsByNameQuery, youngestPersonsQuery } from '~/shared/api/service'
 import { useDocumentMeta } from '~/shared/lib/hooks/useDocumentMeta'
 import { personRoute, personsBySearchRoute, personsRoute } from '~/shared/routing'
 import { PersonsCardList } from '~/shared/ui/card-list/PersonsCardList'

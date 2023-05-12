@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 import { fetchSimilarImagesFx } from '~/pages/movie/api/fetchSimilar'
 
-import { movieByIDQuery } from '~/shared/api/fetch'
+import { movieByIDQuery } from '~/shared/api/service'
 import { movieSimilarRoute, notFoundRoute } from '~/shared/routing'
 import { Card } from '~/shared/ui/card/Card'
 import { HeaderGoBack } from '~/shared/ui/HeaderGoBack'

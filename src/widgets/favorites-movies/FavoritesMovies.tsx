@@ -3,7 +3,7 @@ import { useUnit } from 'effector-react'
 
 import { $favoritesMovies } from '~/features/movie-add-to-favorite/model'
 
-import { moviesByIDsQuery } from '~/shared/api/fetch'
+import { moviesByIDsQuery } from '~/shared/api/service'
 import { sortDataByIDs } from '~/shared/lib/sortDataByIDs'
 import { homeRoute, myRoute, searchRoute } from '~/shared/routing'
 import { CardList } from '~/shared/ui/card-list/CardList'

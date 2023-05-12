@@ -7,7 +7,7 @@ import { fetchMoviePersonsFx } from '~/pages/movie/api/fetchPersons'
 import { MoviePersonsPageSkeleton } from '~/pages/movie/skeletons/MoviePersonsPageSkeleton'
 import { AlternativeColPersonCard } from '~/pages/movie/ui/AlternativeColPersonCard'
 
-import { movieByIDQuery } from '~/shared/api/fetch'
+import { movieByIDQuery } from '~/shared/api/service'
 import { moviePersonsRoute, notFoundRoute } from '~/shared/routing'
 import { HeaderGoBack } from '~/shared/ui/HeaderGoBack'
 import { HeaderMovieList } from '~/shared/ui/HeaderMovieList'

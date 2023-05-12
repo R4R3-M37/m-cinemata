@@ -2,7 +2,7 @@ import { useUnit } from 'effector-react'
 
 import { $recentMovies } from '~/widgets/recent-movies/model'
 
-import { recentMoviesByIDsQuery } from '~/shared/api/fetch'
+import { recentMoviesByIDsQuery } from '~/shared/api/service'
 import { sortDataByIDs } from '~/shared/lib/sortDataByIDs'
 import { CardList } from '~/shared/ui/card-list/CardList'
 

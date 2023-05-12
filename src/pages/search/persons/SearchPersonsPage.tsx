@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 import { $data, pageChanged } from '~/pages/search/persons/model'
 
-import { personsByNameQuery } from '~/shared/api/fetch'
+import { personsByNameQuery } from '~/shared/api/service'
 import { notFoundRoute, personsBySearchRoute } from '~/shared/routing'
 import { PersonCard } from '~/shared/ui/card/PersonCard'
 import { HeaderGoBack } from '~/shared/ui/HeaderGoBack'

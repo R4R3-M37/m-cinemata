@@ -16,7 +16,7 @@ import {
 	sciFiSerialsQuery,
 	top10MoviesQuery,
 	top250MoviesQuery
-} from '~/shared/api/fetch'
+} from '~/shared/api/service'
 
 export const fetchMoviesFx = createEffect((contentType: string) => {
 	if (contentType === 'Моё кино') {

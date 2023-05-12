@@ -1,6 +1,6 @@
 import { createEvent, createStore, sample } from 'effector'
 
-import { moviesByGenreQuery } from '~/shared/api/fetch'
+import { moviesByGenreQuery } from '~/shared/api/service'
 import { Movies } from '~/shared/api/types/movies'
 import { history } from '~/shared/routing'
 

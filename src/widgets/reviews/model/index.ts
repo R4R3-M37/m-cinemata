@@ -1,6 +1,6 @@
 import { createEvent, createStore, sample } from 'effector'
 
-import { reviewsByMovieIDQuery } from '~/shared/api/fetch'
+import { reviewsByMovieIDQuery } from '~/shared/api/service'
 import { ReviewsRoot } from '~/shared/api/types/reviews'
 import { history } from '~/shared/routing'
 

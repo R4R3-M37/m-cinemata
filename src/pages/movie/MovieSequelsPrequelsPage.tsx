@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 import { fetchMovieSequelsPrequelsFx } from '~/pages/movie/api/fetchSequelsPrequels'
 
-import { movieByIDQuery } from '~/shared/api/fetch'
+import { movieByIDQuery } from '~/shared/api/service'
 import { movieSequelsPrequelsRoute, notFoundRoute } from '~/shared/routing'
 import { Card } from '~/shared/ui/card/Card'
 import { HeaderGoBack } from '~/shared/ui/HeaderGoBack'

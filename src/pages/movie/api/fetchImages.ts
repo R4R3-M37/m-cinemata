@@ -1,7 +1,7 @@
 import { RouteParamsAndQuery } from 'atomic-router'
 import { createEffect } from 'effector'
 
-import { imagesByMovieIDQuery } from '~/shared/api/fetch'
+import { imagesByMovieIDQuery } from '~/shared/api/service'
 
 export const fetchMovieImagesFx = createEffect(
 	({ route, page }: { route: RouteParamsAndQuery<{ id: string }>; page: number }) => {

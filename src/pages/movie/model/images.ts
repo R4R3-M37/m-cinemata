@@ -1,9 +1,8 @@
 import { combine, createEvent, createStore, sample } from 'effector'
 
-import { imagesByMovieIDQuery } from '~/shared/api/fetch'
+import { imagesByMovieIDQuery } from '~/shared/api/service'
 import { MovieImagesRoot } from '~/shared/api/types/movies'
-import { movieImagesRoute, history } from '~/shared/routing'
-
+import { history, movieImagesRoute } from '~/shared/routing'
 
 export const pageChanged = createEvent<number>()
 const reset = createEvent()

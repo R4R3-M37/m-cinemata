@@ -2,7 +2,7 @@ import { useUnit } from 'effector-react'
 
 import { $recentPersons } from '~/widgets/recent-persons/model'
 
-import { recentPersonsQuery } from '~/shared/api/fetch'
+import { recentPersonsQuery } from '~/shared/api/service'
 import { sortDataByIDs } from '~/shared/lib/sortDataByIDs'
 import { PersonsCardList } from '~/shared/ui/card-list/PersonsCardList'
 

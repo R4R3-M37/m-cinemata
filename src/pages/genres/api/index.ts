@@ -3,7 +3,7 @@ import { createEffect, createEvent, sample } from 'effector'
 
 import { genreFormatter } from '~/pages/genres/config'
 
-import { moviesByGenreQuery } from '~/shared/api/fetch'
+import { moviesByGenreQuery } from '~/shared/api/service'
 import { moviesByGenreRoute } from '~/shared/routing'
 
 export const pageChanged = createEvent<number>()

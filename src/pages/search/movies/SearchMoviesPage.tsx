@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 import { $data, pageChanged } from '~/pages/search/movies/model'
 
-import { moviesByNameQuery } from '~/shared/api/fetch'
+import { moviesByNameQuery } from '~/shared/api/service'
 import { moviesBySearchRoute, notFoundRoute } from '~/shared/routing'
 import { Card } from '~/shared/ui/card/Card'
 import { HeaderGoBack } from '~/shared/ui/HeaderGoBack'

@@ -16,7 +16,7 @@ import {
 	newMoviesQuery,
 	newSerialsQuery,
 	sciFiSerialsQuery
-} from '~/shared/api/fetch'
+} from '~/shared/api/service'
 import { CardList } from '~/shared/ui/card-list/CardList'
 
 export const MyMovies = () => {

@@ -11,7 +11,7 @@ import { PersonAddToFavorite } from '~/features/person-add-to-favorite/PersonAdd
 
 import { MovieBlock } from '~/entities/movie/MovieBlock'
 
-import { personByIDQuery } from '~/shared/api/fetch'
+import { personByIDQuery } from '~/shared/api/service'
 import { IoIosArrowForward } from '~/shared/icons'
 import { useDocumentMeta } from '~/shared/lib/hooks/useDocumentMeta'
 import { movieRoute, personRoute } from '~/shared/routing'

@@ -9,7 +9,7 @@ import { FavoritesMovies } from '~/widgets/favorites-movies/FavoritesMovies'
 import { RecentMovies } from '~/widgets/recent-movies/RecentMovies'
 import { SearchAutocomplete } from '~/widgets/search-autocomplete/SearchAutocomplete'
 
-import { moviesByNameQuery, newMoviesQuery } from '~/shared/api/fetch'
+import { moviesByNameQuery, newMoviesQuery } from '~/shared/api/service'
 import { genresExclusive } from '~/shared/assets/images/genres'
 import { useDocumentMeta } from '~/shared/lib/hooks/useDocumentMeta'
 import { movieLengthFormatter } from '~/shared/lib/movieLengthFormatter'

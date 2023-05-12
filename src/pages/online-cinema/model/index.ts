@@ -8,7 +8,7 @@ import {
 	newMoviesQuery,
 	newSerialsQuery,
 	top250MoviesQuery
-} from '~/shared/api/fetch'
+} from '~/shared/api/service'
 import { Movies } from '~/shared/api/types/movies'
 import { history } from '~/shared/routing'
 

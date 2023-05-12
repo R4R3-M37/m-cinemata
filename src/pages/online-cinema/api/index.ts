@@ -11,7 +11,7 @@ import {
 	newMoviesQuery,
 	newSerialsQuery,
 	top250MoviesQuery
-} from '~/shared/api/fetch'
+} from '~/shared/api/service'
 import { onlineCinemaRoute } from '~/shared/routing'
 
 export const pageChanged = createEvent<number>()

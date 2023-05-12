@@ -6,7 +6,7 @@ import { pageChanged } from '~/pages/genres/api'
 import { genreFormatter } from '~/pages/genres/config'
 import { $data } from '~/pages/genres/model'
 
-import { moviesByGenreQuery } from '~/shared/api/fetch'
+import { moviesByGenreQuery } from '~/shared/api/service'
 import { moviesByGenreRoute, notFoundRoute } from '~/shared/routing'
 import { Card } from '~/shared/ui/card/Card'
 import { HeaderGoBack } from '~/shared/ui/HeaderGoBack'

@@ -1,7 +1,7 @@
 import { RouteParamsAndQuery } from 'atomic-router'
 import { createEffect, createEvent, sample } from 'effector'
 
-import { reviewsByMovieIDQuery } from '~/shared/api/fetch'
+import { reviewsByMovieIDQuery } from '~/shared/api/service'
 import { movieRoute } from '~/shared/routing'
 
 export const reviewsPageChanged = createEvent<number>()

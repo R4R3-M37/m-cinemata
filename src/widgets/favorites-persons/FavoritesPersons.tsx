@@ -3,7 +3,7 @@ import { useUnit } from 'effector-react'
 
 import { $favoritesPersons } from '~/features/person-add-to-favorite/model'
 
-import { personsByIDsQuery } from '~/shared/api/fetch'
+import { personsByIDsQuery } from '~/shared/api/service'
 import { sortDataByIDs } from '~/shared/lib/sortDataByIDs'
 import { myRoute, personsRoute } from '~/shared/routing'
 import { PersonsCardList } from '~/shared/ui/card-list/PersonsCardList'

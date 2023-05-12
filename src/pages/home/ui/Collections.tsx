@@ -3,7 +3,7 @@ import { useUnit } from 'effector-react'
 import { FavoritesMovies } from '~/widgets/favorites-movies/FavoritesMovies'
 import { RecentMovies } from '~/widgets/recent-movies/RecentMovies'
 
-import { detectivesSerialsQuery, top10MoviesQuery, top250MoviesQuery } from '~/shared/api/fetch'
+import { detectivesSerialsQuery, top10MoviesQuery, top250MoviesQuery } from '~/shared/api/service'
 import { genresExclusive } from '~/shared/assets/images/genres'
 import { CardList } from '~/shared/ui/card-list/CardList'
 import { CardListExclusive } from '~/shared/ui/card-list/CardListExclusive'
