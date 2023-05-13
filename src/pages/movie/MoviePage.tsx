@@ -64,6 +64,13 @@ export const MoviePage = () => {
 				}`}</title>
 				<link rel='canonical' href='https://m-cinemata.vercel.app' />
 				<meta name='description' content={movie?.shortDescription || movie?.description || ''} />
+				<meta
+					property='og:title'
+					content={`Cinemata | ${movieName ? movieName : 'Загрузка...'} ${
+						movie?.year ? `(${movie?.year})` : ''
+					}`}
+				/>
+				<meta property='og:description' content={movie?.shortDescription || movie?.description || ''} />
 				<meta property='og:image' content={movieImage} />
 			</Helmet>
 			<HeaderGoBack redirectToSearch={true} />
