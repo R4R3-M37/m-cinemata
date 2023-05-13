@@ -2,6 +2,7 @@ import 'dayjs/locale/ru'
 import { redirect } from 'atomic-router'
 import { sample } from 'effector'
 import { useStore, useUnit } from 'effector-react'
+import { Helmet } from 'react-helmet'
 
 import { fetchMovieDataFx } from '~/pages/movie/api/fetchMovie'
 import { MoviePageSkeleton } from '~/pages/movie/skeletons/MoviePageSkeleton'
@@ -27,7 +28,6 @@ import { MovieLogo } from '~/entities/movie/MovieLogo'
 import { PersonsPreview } from '~/entities/movie/PersonsPreview'
 
 import { movieByIDQuery } from '~/shared/api/service'
-import { useDocumentMeta } from '~/shared/lib/hooks/useDocumentMeta'
 import { movieRoute, notFoundRoute } from '~/shared/routing'
 import { HeaderGoBack } from '~/shared/ui/HeaderGoBack'
 
@@ -49,12 +49,6 @@ export const MoviePage = () => {
 	const movieImage = movie?.poster?.url || ''
 	const backdropImage = movie?.backdrop?.url || movie?.poster?.url || ''
 
-	useDocumentMeta({
-		title: `Cinemata | ${movieName ? movieName : 'Загрузка...'} ${movie?.year ? `(${movie?.year})` : ''}`,
-		description: movie?.shortDescription || movie?.description || '',
-		image: movieImage
-	})
-
 	if ((movie && 'message' in movie) || (!movie && !loading)) redirect({ route: notFoundRoute })
 	if (loading) {
 		return <MoviePageSkeleton />
@@ -64,6 +58,14 @@ export const MoviePage = () => {
 
 	return (
 		<>
+			<Helmet>
+				<title>{`Cinemata | ${movieName ? movieName : 'Загрузка...'} ${
+					movie?.year ? `(${movie?.year})` : ''
+				}`}</title>
+				<link rel='canonical' href='https://m-cinemata.vercel.app' />
+				<meta name='description' content={movie?.shortDescription || movie?.description || ''} />
+				<meta property='og:image' content={movieImage} />
+			</Helmet>
 			<HeaderGoBack redirectToSearch={true} />
 			<ImageBackground src={movieImage} backdropImage={backdropImage} />
 			<div className='relative z-50'>
