@@ -363,7 +363,7 @@ export const top250MoviesQuery = createQuery({
 export const top10MoviesQuery = createQuery({
 	effect: createEffect(async (): Promise<MoviesRoot> => {
 		const response = await fetch(
-			`${baseUrl}/v1/movie/?field=top10&search=!null`,
+			`${baseUrl}/v1/movie?top10=!null`,
 
 			{
 				method: 'GET',
