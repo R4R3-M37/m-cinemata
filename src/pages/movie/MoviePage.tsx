@@ -52,7 +52,7 @@ export const MoviePage = () => {
 	useDocumentMeta({
 		title: `Cinemata | ${movieName ? movieName : 'Загрузка...'} ${movie?.year ? `(${movie?.year})` : ''}`,
 		description: movie?.shortDescription || movie?.description || '',
-		image: backdropImage
+		image: movieImage
 	})
 
 	if ((movie && 'message' in movie) || (!movie && !loading)) redirect({ route: notFoundRoute })

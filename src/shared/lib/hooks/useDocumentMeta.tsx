@@ -16,22 +16,20 @@ export function useDocumentMeta({
 	useEffect(() => {
 		if (!title) return
 
-		const prevTitle = document.title
+		const prevTitle = document.title || 'Cinemata'
 		const prevImage = document.querySelectorAll('meta[property=og\\:image]')[0]?.getAttribute('content') || noPoster
 		const prevDescription =
-			document.querySelectorAll('meta[property=description]')[0]?.getAttribute('content') || description
+			document.querySelectorAll('meta[name=description]')[0]?.getAttribute('content') || description
 
 		document.title = title
 		document.querySelectorAll('meta[property=og\\:image]')[0]?.setAttribute('content', image)
 		document.querySelectorAll('meta[property=og\\:title]')[0]?.setAttribute('content', title)
-		document.querySelectorAll('meta[property=description]')[0]?.setAttribute('content', description)
+		document.querySelectorAll('meta[name=description]')[0]?.setAttribute('content', description)
 
 		return () => {
 			document.title = prevTitle
-			document
-				.querySelectorAll('meta[property=description]')[0]
-				?.setAttribute('content', prevDescription || description)
-			document.querySelectorAll('meta[property=og\\:image]')[0]?.setAttribute('content', prevImage || noPoster)
+			document.querySelectorAll('meta[name=description]')[0]?.setAttribute('content', prevDescription)
+			document.querySelectorAll('meta[property=og\\:image]')[0]?.setAttribute('content', prevImage)
 			document.querySelectorAll('meta[property=og\\:title]')[0]?.setAttribute('content', prevTitle)
 		}
 	})
