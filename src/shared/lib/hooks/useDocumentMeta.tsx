@@ -24,11 +24,13 @@ export function useDocumentMeta({
 		document.title = title
 		document.querySelectorAll('meta[property=og\\:image]')[0]?.setAttribute('content', image)
 		document.querySelectorAll('meta[property=og\\:title]')[0]?.setAttribute('content', title)
+		document.querySelectorAll('meta[property=og\\:description]')[0]?.setAttribute('content', description)
 		document.querySelectorAll('meta[name=description]')[0]?.setAttribute('content', description)
 
 		return () => {
 			document.title = prevTitle
 			document.querySelectorAll('meta[name=description]')[0]?.setAttribute('content', prevDescription)
+			document.querySelectorAll('meta[property=og\\:description]')[0]?.setAttribute('content', prevDescription)
 			document.querySelectorAll('meta[property=og\\:image]')[0]?.setAttribute('content', prevImage)
 			document.querySelectorAll('meta[property=og\\:title]')[0]?.setAttribute('content', prevTitle)
 		}
