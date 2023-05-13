@@ -15,6 +15,7 @@ import { Rental } from '~/pages/movie/ui/Rental'
 import { SequelsAndPrequels } from '~/pages/movie/ui/SequelsAndPrequels'
 import { SimilarMovies } from '~/pages/movie/ui/SimilarMovies'
 import { Trailers } from '~/pages/movie/ui/Trailers'
+import { Watchability } from '~/pages/movie/ui/Watchability'
 
 import { Facts } from '~/widgets/facts/Facts'
 import { addedToRecent } from '~/widgets/recent-movies/model'
@@ -95,6 +96,7 @@ export const MoviePage = () => {
 			<Images id={id} />
 			<Facts facts={movie?.facts} />
 			<Rental id={id} premiere={movie?.premiere} />
+			<Watchability watchability={movie?.watchability?.items} />
 			<SequelsAndPrequels id={id} sequelsAndPrequels={movie?.sequelsAndPrequels?.filter(({ name }) => name)} />
 			<SimilarMovies similarMovies={movie?.similarMovies?.filter(({ name }) => name)} id={id} />
 		</>
