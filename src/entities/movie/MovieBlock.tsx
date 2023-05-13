@@ -13,7 +13,7 @@ interface Props {
 
 export const MovieBlock = ({ children, to, id, title, count }: Props) => {
 	return (
-		<section className='my-4'>
+		<section className='my-8'>
 			<MovieBlockTitle to={to} id={id} title={title} count={count} />
 			<div className='mt-4 flex overflow-auto'>
 				<div className='flex items-center overflow-x-auto overflow-y-hidden'>
