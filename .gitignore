@@ -3,3 +3,7 @@ node_modules
 
 # Ignore Webstorm config files
 .idea
+
+# Ignore compiled output
+build/
+dist/
