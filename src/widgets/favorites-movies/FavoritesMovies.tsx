@@ -12,7 +12,7 @@ sample({
 	clock: [homeRoute.opened, myRoute.opened, searchRoute.opened],
 	source: $favoritesMovies,
 	target: createEffect((favoritesIDs: string[]) => {
-		if (favoritesIDs) {
+		if (favoritesIDs.length) {
 			moviesByIDsQuery.start({ ids: favoritesIDs })
 		}
 	})
@@ -25,7 +25,7 @@ export const FavoritesMovies = () => {
 
 	return (
 		<>
-			{!!favoritesIDs.length && (
+			{favoritesIDs.length && (
 				<CardList
 					data={sortDataByIDs({ data: favoritesMovies, ids: favoritesIDs })}
 					count={favoritesMovies?.docs?.length}
