@@ -25,7 +25,7 @@ export const premierFormatter = (premiere: Premiere): PremierFormatted[] => {
 
 	for (const country in premiere) {
 		if (!country || !premiere[country as keyof typeof premiere]) break
-		if (country !== '_id' && country !== 'country') {
+		if (country !== 'country') {
 			const date = dayjs(new Date(premiere[country as keyof typeof premiere] || '')).locale('ru')
 
 			const day = date.format('DD')
