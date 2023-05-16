@@ -25,7 +25,7 @@ export const FavoritesMovies = () => {
 
 	return (
 		<>
-			{favoritesIDs.length && (
+			{!!favoritesIDs.length && (
 				<CardList
 					data={sortDataByIDs({ data: favoritesMovies, ids: favoritesIDs })}
 					count={favoritesMovies?.docs?.length}
