@@ -1,14 +1,7 @@
-export interface Docs {
-	id?: number | string
-	name?: string
-	enName?: string
-	photo?: string
-	age?: number
-	sex?: string
-}
+import { PersonRoot } from '~/shared/api/types/person'
 
 export interface PersonsRoot {
-	docs?: Docs[]
+	docs?: PersonRoot[]
 	total?: number
 	limit?: number
 	page?: number
