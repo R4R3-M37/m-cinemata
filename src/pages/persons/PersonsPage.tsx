@@ -74,7 +74,7 @@ export const PersonsPage = () => {
 								{({ selected }) => (
 									<div className='relative flex'>
 										{!!person.age && (
-											<div className='absolute top-[5px] left-[-5px] rounded px-0.5 text-black bg-white'>
+											<div className='absolute top-[5px] left-[-5px] rounded bg-white px-0.5 text-black'>
 												<b>{person.age}</b>
 											</div>
 										)}
