@@ -6,7 +6,7 @@ import { baseUrl, categoryFormatter, currentYear, sortByFormatter } from '~/shar
 import { MovieImagesRoot, Movies, MoviesRoot } from '~/shared/api/types/movies'
 import { PersonRoot } from '~/shared/api/types/person'
 import { PersonsRoot } from '~/shared/api/types/persons'
-import { ReviewsResponse } from '~/shared/api/types/reviews'
+import { ReviewsRoot } from '~/shared/api/types/reviews'
 
 export const movieBySearchQuery = createQuery({
 	effect: createEffect(async ({ query, page }: { query: RouteQuery; page: number }): Promise<MoviesRoot> => {
@@ -394,7 +394,7 @@ export const imagesByMovieIDQuery = createQuery({
 })
 
 export const reviewsByMovieIDQuery = createQuery({
-	effect: createEffect(async ({ id, page }: { id: string; page: number }): Promise<ReviewsResponse> => {
+	effect: createEffect(async ({ id, page }: { id: string; page: number }): Promise<ReviewsRoot> => {
 		const response = await fetch(
 			`https://kinopoiskapiunofficial.tech/api/v2.2/films/${id}/reviews?page=${page}&order=DATE_DESC`,
 			{
