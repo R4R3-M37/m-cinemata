@@ -1,6 +1,6 @@
 import { Link } from 'atomic-router-react'
 
-import { Poster, Rating } from '~/shared/api/types/movies'
+import { Rating, ShortImage } from '~/shared/api/types/movies'
 import { movieRoute } from '~/shared/routing'
 import { Image } from '~/shared/ui/Image'
 
@@ -8,7 +8,7 @@ interface Props {
 	className?: string
 	id: string
 	rating?: Rating
-	poster?: Poster
+	poster?: ShortImage
 	name: string
 	enName: string
 	alternativeName: string
