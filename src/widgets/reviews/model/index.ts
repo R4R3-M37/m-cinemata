@@ -1,11 +1,11 @@
 import { createEvent, createStore, sample } from 'effector'
 
 import { reviewsByMovieIDQuery } from '~/shared/api/service'
-import { ReviewsRoot } from '~/shared/api/types/reviews'
+import { ReviewsResponse } from '~/shared/api/types/reviews'
 import { history } from '~/shared/routing'
 
 const reset = createEvent()
-export const $reviews = createStore<ReviewsRoot | null>(null).reset(reset)
+export const $reviews = createStore<ReviewsResponse | null>(null).reset(reset)
 
 sample({
 	clock: reviewsByMovieIDQuery.$data,
