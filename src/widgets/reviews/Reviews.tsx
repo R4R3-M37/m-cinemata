@@ -146,7 +146,7 @@ export const Reviews = () => {
 									(reviews.items[activeDataIndex].type === 'POSITIVE' && '!text-green-500') ||
 									(reviews.items[activeDataIndex].type === 'NEGATIVE' && '!text-red-500') ||
 									(reviews.items[activeDataIndex].type === 'NEUTRAL' && 'dark:text-white')
-								} text-xl font-semibold text-gray-900`}>
+								} text-xl font-semibold`}>
 								{reviews.items[activeDataIndex].title ||
 									(reviews.items[activeDataIndex].description || 'Без названия').slice(0, 30) + '...'}
 							</h3>
