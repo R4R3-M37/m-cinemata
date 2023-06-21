@@ -1,30 +1,33 @@
-export interface Spouse {
-	id?: number
-	name?: string
-	divorced?: boolean
-	children?: number
-	relation?: string
-	_id?: string
-}
-
-export interface Profession {
-	value?: string
-}
-
-export interface BirthPlace {
+interface BirthPlace {
 	value: string
 }
 
-export interface DeathPlace {
+interface DeathPlace {
 	value: string
 }
 
-export interface Movies {
-	id?: number
+interface Spouses {
+	id: number
+	name: string
+	divorced: boolean
+	divorcedReason: string
+	sex: string
+	children: number
+	relation: string
+}
+
+interface Profession {
+	value: string
+}
+
+interface Movie {
+	id: number
 	name?: string
+	alternativeName?: string
 	rating?: number
 	general?: boolean
 	description?: string
+	enProfession?: string
 }
 
 export interface Facts {
@@ -32,22 +35,20 @@ export interface Facts {
 }
 
 export interface PersonRoot {
-	spouses?: Spouse[]
-	id?: number
+	id: number
 	name?: string
 	enName?: string
 	photo?: string
-	profession?: Profession[]
+	sex?: string
+	growth?: number
+	birthday?: string
+	death?: string
+	age?: number
 	birthPlace?: BirthPlace[]
 	deathPlace?: DeathPlace[]
+	spouses: Spouses
+	countAwards: number
+	profession?: Profession[]
 	facts?: Facts[]
-	movies?: Movies[]
-	__v?: number
-	age?: number
-	birthday?: string
-	countAwards?: number
-	death?: string
-	growth?: string
-	sex?: string
-	updatedAt?: string
+	movies?: Movie[]
 }
