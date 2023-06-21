@@ -409,7 +409,7 @@ export const reviewsByMovieIDQuery = createQuery({
 })
 
 export const personByIDQuery = createQuery({
-	effect: createEffect(async ({ id }: { id: string }) => {
+	effect: createEffect(async ({ id }: { id: string }): Promise<PersonRoot> => {
 		const response = await fetch(
 			`${baseUrl}/v1/person?field=id&search=${id}`,
 
@@ -424,7 +424,7 @@ export const personByIDQuery = createQuery({
 
 		return response.json()
 	}),
-	mapData({ result }: { result: PersonRoot }) {
+	mapData({ result }: { result: PersonRoot }): PersonRoot {
 		return {
 			...result,
 			movies: result?.movies?.filter(({ name, rating }) => name && rating)
