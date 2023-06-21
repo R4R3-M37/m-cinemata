@@ -116,7 +116,7 @@ export const Reviews = () => {
 						<div className='mb-4 flex items-center space-x-4'>
 							<div className='relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-gray-100 dark:bg-gray-600'>
 								<span className='font-medium text-gray-600 dark:text-gray-300'>
-									{reviews.items[activeDataIndex]?.author || 'A'}
+									{reviews.items[activeDataIndex]?.author[0] || 'A'}
 								</span>
 							</div>
 							<div className='space-y-1 font-medium dark:text-white'>
