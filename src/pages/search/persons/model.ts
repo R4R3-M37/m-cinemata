@@ -2,10 +2,10 @@ import { RouteParamsAndQuery } from 'atomic-router'
 import { createEffect, createEvent, createStore, sample } from 'effector'
 
 import { personsByNameQuery } from '~/shared/api/service'
-import { Docs } from '~/shared/api/types/persons'
+import { PersonRoot } from '~/shared/api/types/person'
 import { history, personsBySearchRoute } from '~/shared/routing'
 
-type DataStoreType = { docs: Docs[]; pages: number | undefined }
+type DataStoreType = { docs: PersonRoot[]; pages: number | undefined }
 export const pageChanged = createEvent<number>()
 export const reset = createEvent()
 

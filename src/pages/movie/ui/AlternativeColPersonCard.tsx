@@ -1,12 +1,12 @@
 import { Link } from 'atomic-router-react'
 
-import { Docs } from '~/shared/api/types/persons'
+import { PersonRoot } from '~/shared/api/types/person'
 import noPoster from '~/shared/assets/images/no-poster.png'
 import { IoIosArrowForward } from '~/shared/icons'
 import { personRoute } from '~/shared/routing'
 import { Image } from '~/shared/ui/Image'
 
-type Props = Omit<Docs, 'sex'>
+type Props = Omit<PersonRoot, 'sex' | 'spouses' | 'countAwards'>
 
 export const AlternativeColPersonCard = ({ id, photo, name, enName }: Props) => {
 	if (!id || !name) {

@@ -1,12 +1,12 @@
 import { Link } from 'atomic-router-react'
 
-import { Docs } from '~/shared/api/types/persons'
+import { PersonRoot } from '~/shared/api/types/person'
 import { personRoute } from '~/shared/routing'
 import { CardListSkeleton } from '~/shared/ui/card-list/ui/CardListSkeleton'
 import { Image } from '~/shared/ui/Image'
 
 interface Props {
-	data?: Docs[]
+	data?: PersonRoot[]
 	loading: boolean
 	title: string
 }

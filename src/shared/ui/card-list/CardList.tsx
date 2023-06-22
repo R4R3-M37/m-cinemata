@@ -1,14 +1,14 @@
 import { Link } from 'atomic-router-react'
 
 import { Movies } from '~/shared/api/types/movies'
-import { Docs } from '~/shared/api/types/persons'
+import { PersonRoot } from '~/shared/api/types/person'
 import { onlineCinemaRoute } from '~/shared/routing'
 import { CardListSkeleton } from '~/shared/ui/card-list/ui/CardListSkeleton'
 import { Card } from '~/shared/ui/card/Card'
 import { ShowMore } from '~/shared/ui/scroll-type/ShowMore'
 
 interface Props {
-	data?: Movies[] | Docs[] | any[]
+	data?: Movies[] | PersonRoot[] | any
 	loading: boolean
 	title: string
 	count?: number

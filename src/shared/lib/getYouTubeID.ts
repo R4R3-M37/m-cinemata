@@ -1,9 +1,9 @@
-import { Trailers } from '~/shared/api/types/movies'
+import { Video } from '~/shared/api/types/movies'
 
 const regex =
 	/(?:youtu\.be\/|youtube\.com(?:\/embed\/|\/v\/|\/watch\?v=|\/user\/\S+|\/ytscreeningroom\?v=|\/sandalsResorts#\w\/\w\/.*\/))([^/&]{10,12})/
 
-export const getYouTubeId = (videos: Trailers[]): Trailers[] | [] => {
+export const getYouTubeId = (videos: Video[]): Video[] | [] => {
 	if (!videos) return videos
 	if (!Array.isArray(videos)) return []
 

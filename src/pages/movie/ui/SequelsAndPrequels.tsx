@@ -9,7 +9,7 @@ import { Image } from '~/shared/ui/Image'
 import { ShowMore } from '~/shared/ui/scroll-type/ShowMore'
 
 interface Props {
-	sequelsAndPrequels?: Types.SequelsAndPrequel[]
+	sequelsAndPrequels?: Types.LinkedMovie[]
 	id?: string
 }
 

@@ -42,7 +42,7 @@ export const MoviePersonsPage = () => {
 					<section className='flex flex-col space-y-5 px-4'>
 						{data?.persons?.slice(0, limit).map((person) => (
 							<AlternativeColPersonCard
-								id={String(person.id)}
+								id={person.id || 0}
 								name={person.name || ''}
 								enName={person.enName || ''}
 								photo={person.photo || ''}

@@ -46,7 +46,7 @@ export interface ShortImage {
 	previewUrl?: string
 }
 
-interface Video {
+export interface Video {
 	url?: string
 	name?: string
 	site?: string
@@ -122,7 +122,7 @@ interface Watchability {
 	items: WatchabilityItem[]
 }
 
-interface WatchabilityItem {
+export interface WatchabilityItem {
 	name?: string
 	logo?: Logo
 	url?: string

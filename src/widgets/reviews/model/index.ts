@@ -10,9 +10,13 @@ export const $reviews = createStore<ReviewsRoot | null>(null).reset(reset)
 sample({
 	clock: reviewsByMovieIDQuery.$data,
 	source: $reviews,
-	fn: (source, clock) => {
+	fn: (source, clock): ReviewsRoot | null => {
 		if (!source) {
 			return clock
+		}
+
+		if (!clock) {
+			return source
 		}
 
 		return {

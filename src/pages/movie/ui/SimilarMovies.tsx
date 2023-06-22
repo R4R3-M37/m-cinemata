@@ -8,7 +8,7 @@ import { Image } from '~/shared/ui/Image'
 import { ShowMore } from '~/shared/ui/scroll-type/ShowMore'
 
 interface Props {
-	similarMovies?: Types.SimilarMovie[]
+	similarMovies?: Types.LinkedMovie[]
 	id: string
 }
 

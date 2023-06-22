@@ -1,10 +1,10 @@
 import { Link } from 'atomic-router-react'
 
-import { Docs } from '~/shared/api/types/persons'
+import { PersonRoot } from '~/shared/api/types/person'
 import { personRoute } from '~/shared/routing'
 import { Image } from '~/shared/ui/Image'
 
-type Props = Omit<Docs, 'sex'>
+type Props = Omit<PersonRoot, 'sex'>
 
 export const PersonCard = ({ id, photo, age, name, enName }: Props) => {
 	return (
